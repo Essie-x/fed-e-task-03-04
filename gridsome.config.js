@@ -5,21 +5,22 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: "Gridsome",
   plugins: [],
   templates: {
     New: [
       {
-        path: '/new/:id',
-        component: './src/templates/New.vue'
-      }
+        path: "/new/:id",
+        component: "./src/templates/New.vue",
+      },
     ],
     Post: [
       {
-        path: '/blog/:id',
-        component: './src/templates/Blog.vue'
-      }
+        path: "/blog/:id",
+        component: "./src/templates/Blog.vue",
+      },
     ],
   },
-  pathPrefix: process.env.NODE_ENV === 'production' ? '/dist/' : '/'
-}
+  pathPrefix: process.env.NODE_ENV === "production" ? "/dist/" : "/",
+  outputDir: "docs",
+};
